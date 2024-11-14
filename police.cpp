@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-//tariq`s solved
+//maher and tariq solve after merge
 
 #include<bits/stdc++.h>
 
@@ -21,29 +20,22 @@ typedef long long ll;
 using namespace std;
 
 void solve(){
-   int n;cin>>n;
-    int police=0,crimes=0,tread=0;
-    int arr[n];
-    REP(i,0,n)
-    {
-        cin>>arr[i];
-    }
-    REP(i,0,n)
-    {
-        if(arr[i]==-1 && police<=0)
-        {
-            tread++;
+   int n,police=0,untreated = 0;
+    cin>>n;
+    int chro [100000];
+    for(int i = 0; i < n; i++){
+        cin>>chro[i];
+        if(chro[i] != -1){
+            police+=chro[i];
         }
-        else if(arr[i]>0)
-        {
-            police+=arr[i];
-        }
-        else
-        {
-           police--; 
+        else{
+            if(police == 0)
+                untreated++;
+            else
+                police--;
         }
     }
-    cout<<tread;
+    cout<<untreated;
     
 
 
@@ -115,30 +107,3 @@ int main(){
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢷⡶⠿⣵⡿⠽⠾⢿⠳⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠂⠊⠌⠈⠁⠖⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
 */
-=======
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    int n,police=0,untreated = 0;
-    cin>>n;
-    int chro [100000];
-    for(int i = 0; i < n; i++){
-        cin>>chro[i];
-        if(chro[i] != -1){
-            police+=chro[i];
-        }
-        else{
-            if(police == 0)
-                untreated++;
-            else
-                police--;
-        }
-    }
-    cout<<untreated;
-
-    return 0;
-}
->>>>>>> maher_Solve
